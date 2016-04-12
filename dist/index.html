@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width" name="viewport"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>生物无机与合成化学教育部重点实验室>>中山大学化学与化学工程学院</title>
+    <meta name="keywords" content="生物无机与合成化学教育部重点实验室,bisc,中山大学化学与化学工程学院">
+    <meta name="description" content="中山大学化学与化学工程学院生物无机与合成化学教育部重点实验室">
+    <meta name="author" content="@yangfch3">
+    <link rel="shortcut icon" type="image/ico" href="#" />
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+
+    <!-- 引入 iOS App icon -->
+    <link rel="apple-touch-icon-precomposed" href="#" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="#">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="#">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="#">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="#">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="#">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="#">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="#">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="#">
+    
+    <!-- 引入 windows 磁贴图片 -->
+    <meta name="msapplication-TileImage" content="#">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <noscript>本站需要启用 JavaScript！</noscript>
+<div class="headerwrap">
+	<div class="header-top-small flofix">
+		<div class="container header-top-small-container">
+			<span class="header-menu-icon" id="js-toggle-menu"></span>
+			<span class="header-search-icon" id="js-toggle-search"></span>
+		</div>
+		<div class="header-search-box-container" id="js-toggle-search-data">
+		<div class="header-search-box" >
+			<div class="header-search">
+				<script type="text/javascript" language="javascript">
+							function GoSearch(){
+								var Keyword = document.getElementById("Keyword").value;
+								var IsFuzzy = document.getElementById("IsFuzzy").value;
+								var CategoryID = document.getElementById("CategoryID").value;
+								var HasChild = document.getElementById("HasChild").value;
+								if (Keyword=="关键字"||Keyword=="") {
+									return false;
+								} else{
+									window.location.href="http://ce.sysu.edu.cn/Search.aspx?Keyword="+Keyword+"&"+"IsFuzzy=+on&CategoryID="+CategoryID+"&HasChild=on";
+								};
+							}
+				function GoSearch2(){
+								var Keyword2 = document.getElementById("Keyword2").value;
+								var IsFuzzy = document.getElementById("IsFuzzy").value;
+								var CategoryID = document.getElementById("CategoryID").value;
+								var HasChild = document.getElementById("HasChild").value;
+								if (Keyword2=="关键字"||Keyword2=="") {
+									return false;
+								} else{
+									window.location.href="http://ce.sysu.edu.cn/Search.aspx?Keyword="+Keyword2+"&"+"IsFuzzy=+on&CategoryID="+CategoryID+"&HasChild=on";
+								};
+							}
+				</script>
+				<input type="button" value="" class="header_search_searchBtn searchbtn" onclick="GoSearch();">
+				<div class="header-search-inputBox">
+					<input type="text" class="header-search-input keyword" id="Keyword" value="关键字" onkeypress="if(event.keyCode==13){GoSearch();}">
+					<input type="hidden" id="IsFuzzy" value="on">
+					<input type="hidden" id="CategoryID" value="">
+					<input type="hidden" id="HasChild" value="on">
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="small-nav-container" id="js-toggle-nav-data">
+		<div class="header-top-small-nav">
+			<div class="header-top-dropmenu">
+				<div class="header-top-dropmenu-line1">
+					<a href="#">首页</a>
+					<a href="#">实验室概况</a>
+					<a href="#">研究队伍</a>
+				</div>
+				<div class="header-top-dropmenu-line2">
+					<a href="#">科研成果</a>
+					<a href="#">人才培养</a>
+					<a href="#">运行管理</a>
+				</div>
+				<div class="header-top-dropmenu-line3">
+					<a href="#">仪器设备</a>
+					<a href="#">交流管理</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="header-banner">
+		<div class="container header-banner-container">
+			<div class="container-logo">
+				<a href="#">
+					<img src="../img/header_logo.png" >
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="header-nav-container">
+	<div class="header-nav-content container ">
+		<div class="search floatfix">
+			<input type="text" class="keyword text" id="Keyword2" value="关键字" onkeypress="if(event.keyCode==13){GoSearch2();}">
+			<input type="button" value="" class="submit searchbtn" onclick="GoSearch2();">
+			<input type="hidden" id="IsFuzzy" value="on">
+			<input type="hidden" id="CategoryID" value="">
+			<input type="hidden" id="HasChild" value="on">
+		</div>
+		<ul class="header-nav-list floatfix">
+			<li class="header-nav-list-item">
+				<a href="#">首页</a>
+			</li>
+			<li class="header-nav-list-item">
+				<a href="#">实验室概况</a>
+			</li>
+			<li class="header-nav-list-item">
+				<a href="#">研究队伍</a>
+			</li>
+			<li class="header-nav-list-item">
+				<a href="#">科研成果</a>
+			</li>
+			<li class="header-nav-list-item">
+				<a href="#">人才培养</a>
+			</li>
+			<li class="header-nav-list-item">
+				<a href="#">运行管理</a>
+			</li>
+			<li class="header-nav-list-item">
+				<a href="#">仪器设备</a>
+			</li>
+			<li class="header-nav-list-item">
+				<a href="#">交流合作</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+<div class="bisc-slider">
+    <ul>
+        <li class="slide  slide-01" id="slide-cur"><img src="../img/slide01-1920px.jpg" /></li>
+        <li class="slide"><img src="../img/slide02-1920px.jpg" /></li>
+        <li class="slide"><img src="../img/slide03-1920px.jpg" /></li>
+        <li class="slide"><img src="../img/slide04-1920px.jpg" /></li>
+        <li class="slide"><img src="../img/slide05-1920px.jpg" /></li>
+    </ul>
+    <div class="dot-list">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <span id="slide-prev"></span>
+    <span id="slide-next"></span>
+</div>
+<div class="container">
+<div class="media-md">
+    <div class="content-news">
+        <div class="index-title news-icon"><i>&nbsp;</i><span class="news-title">新闻中心</span><span class="news-more">more</span></div>
+        <ul class="news-list">
+            <li><a><span class="con-time">2014-01-10</span><div class="con-art">“生物无机与合成化学教育部重点实验室”被评为优秀</div></a></li>
+            <li><a><span class="con-time">2013-10-08</span><div class="con-art">热烈祝贺中科院院士、我院陈小明教授当选发展中国家科学院院士</div></a></li>
+            <li><a><span class="con-time">2013-09-12</span><div class="con-art">教育部专家组来校评估“生物无机与合成化学”教育部重点实验室</div></a></li>
+            <li><a><span class="con-time">2013-08-14</span><div class="con-art">“生物无机与合成化学教育部重点实验室”学术委员会会议召开</div></a></li>
+            <li><a><span class="con-time">2012-10-08</span><div class="con-art">“生物无机与合成化学教育部重点实验室”学术委员会会议召开</div></a></li>
+            <li><a><span class="con-time">2011-12-22</span><div class="con-art">以陈小明院士为带头人的创新研究群体获国家基金滚动资助</div></a></li>
+        </ul>
+    </div>
+    <div class="con-academy">
+        <div class="index-title academy-icon"><i>&nbsp;</i><span class="academy-title">院士风采</span></div>
+        <div class="academy">
+            <div class="academy-per">
+                <img src="../img/SQ.png">
+                <div class="person"><span class="per-name">苏锵</span><span class="per-posi">院士</span><p class="per-intro">博士生导师，无机化学家，主要从事稀土化学与发光材料的研究。</p></div>
+            </div>
+        </div>
+        <div class="academy">
+            <div class="academy-per">
+                <img src="../img/JLN.png">
+                <div class="person"><span class="per-name">计亮年</span><span class="per-posi">院士</span><p class="per-intro">博士生导师，无机化学家，长期从事配位化学及生物无机化学研究。</p></div>
+            </div>
+        </div>
+        <div class="academy">
+            <div class="academy-per">
+                <img src="../img/CXM.png">
+                <div class="person"><span class="per-name">陈小明</span><span class="per-posi">院士</span><p class="per-intro">博士生导师，无机化学家，主要从事功能配位化学和配位聚合物晶体工程研究。</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <div class="container">
+        <span class="footer-copyright">◎中山大学化学与化学工程学院 <span class="design-hope">◇厚朴〖HOPE〗工作室设计</span></span><span class="footer-link"><a href="##">&nbsp;网站地图&nbsp;</a>  &nbsp;&nbsp;<a href="##">&nbsp;友情链接&nbsp;</a> &nbsp;&nbsp;<a href="##">&nbsp;联系方式&nbsp;</a></span>
+    </div>
+</div>
+    <script src="../scripts/bisc.js"></script>
+</body>
+</html>
