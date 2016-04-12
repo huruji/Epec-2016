@@ -12,10 +12,10 @@
     "gulp-util": "^3.0.7"
   },
   "scripts": {
-    "prepush": "sh ./commit.sh",
-    "push": "sh ./push.sh",
     "prestart": "sh ./pull.sh",
-    "start": "gulp"
+    "start": "gulp",
+    "preend": "sh ./commit.sh",
+    "end":"sh ./push.sh"
   },
   "repository": {
     "type": "git",
