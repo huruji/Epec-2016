@@ -8,7 +8,7 @@ var gulp=require("gulp"),
 gulp.task("concatcss",function(){
 	return gulp.src("./src/css/*.css")
 	.pipe(concat('main.css'))
-	.pipe(gulp.dest("./dist/"))
+	.pipe(gulp.dest("./dist/css/"))
 });
 //合并js文件
 gulp.task("concatjs",function(){

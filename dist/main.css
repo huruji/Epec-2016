@@ -10,7 +10,8 @@
 /* CSS Reset */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, table {
 	margin: 0;
-	padding: 0
+	padding: 0;
+	width:100%;
 }
 table {
 	border-collapse: collapse;
@@ -174,7 +175,17 @@ div，p {
 .w_55 {
 	width: 55%
 }
-
+.container{
+	max-width:960px;
+}
+.floatfix{
+	*zoom:1;
+}
+.floatfix:after{
+	content:"";
+	clear:both;
+	display:table;
+}
 /* common */
 body {
 	background: #ffffff;
@@ -198,7 +209,9 @@ a {
 .head {
 	margin: 0 auto;
 	height: 121px;
-	width: 960px;
+}
+.search-container{
+	float:right;
 }
 .nav {
 	margin: 0 auto;
@@ -1651,7 +1664,6 @@ ul#Research li ul.submenu li a {
 
 /*contact*/
 .container {
-	border-bottom: 1px solid #c00000;
 	overflow: hidden;
 	background: white;
 }
