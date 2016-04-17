@@ -12,9 +12,9 @@ gulp.task("concatcss",function(){
 });
 //合并js文件
 gulp.task("concatjs",function(){
-	return gulp.src("./src/css/*.js")
+	return gulp.src("./src/script/*.js")
 	.pipe(concat('main.js'))
-	.pipe(gulp.dest("./dist/"))
+	.pipe(gulp.dest("./dist/script/"))
 });
 //合并html模块
 gulp.task("includeHtml",function(){
