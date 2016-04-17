@@ -13,32 +13,52 @@
 		<div class="wrapper">
 			<!-- 网页头部开始 -->
 			<div class="head p_r container">
+				<div class="sm-container">
+					<div class="sm-content floatfix">
+						<div class="sm-menu-search">
+							<input type="text" class="sm-search-input"/>
+							<span class="sm-search-icon sm-icon"></span>
+							<span class="sm-menu-icon sm-icon"></span>
+						</div>
+					</div>
+					<div class="small-menu-container">
+						<ul class="small-menu-list floatfix">
+							<li class="small-menu-item"><a href="#">首页</a></li>
+							<li class="small-menu-item"><a href="#">关于EPEC</a></li>
+							<li class="small-menu-item"><a href="#">新闻资讯</a></li>
+							<li class="small-menu-item"><a href="#">通知公告</a></li>
+							<li class="small-menu-item"><a href="#">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
 				<img src="../images/banner.jpg">
 			</div>
 			<div class="nav p_r floatfix">
-			<div class="nav-container container">	
-			<div class="search-container"> 
-				<form action="" id="search" method="post" class="search f_r">
-					<fieldset>
-						<legend class="none">搜索</legend>
-						<input id="Keyword" class="text" onfocus="if(this.value == &#39;Keyword&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Keyword&#39;;}" value="Keyword" name="Keyword" onkeydown="if(event.keyCode == 13) OnSearchCheckAndSubmit();">
-						<input type="submit" value="Search" class="submit" onclick="OnSearchCheckAndSubmit();">
-					</fieldset>
-				</form>
-			</div>
-				<ul class="floatfix">
-					<li><a href="#">首页</a></li>
-					<li><a href="#">关于EPEC</a></li>
-					<li><a href="#">新闻资讯</a></li>
-					<li><a href="#">通知公告</a></li>
-					<li><a href="#">联系我们</a></li>
-				</ul>
-			</div>
+				<div class="nav-container container">
+					<div class="search-container">
+						<form action="" id="search" method="post" class="search f_r">
+							<fieldset>
+								<legend class="none">搜索</legend>
+								<input id="Keyword" class="text" onfocus="if(this.value == &#39;Keyword&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Keyword&#39;;}" value="Keyword" name="Keyword" onkeydown="if(event.keyCode == 13) OnSearchCheckAndSubmit();">
+								<input type="submit" value="Search" class="submit" onclick="OnSearchCheckAndSubmit();">
+							</fieldset>
+						</form>
+					</div>
+					<ul class="floatfix">
+						<li>
+							<a href="#" id="nav-house">首页</a>
+						</li>
+						<li><a href="#">关于EPEC</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">通知公告</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- 网页头部结束 -->
 			<!-- 网页中部开始 -->
 			<div class="container_index clearfix">
-				<div class="Cont" id="ISL_Cont">
+				<div class="Cont  container" id="ISL_Cont">
 					<div class="ScrCont">
 						<div id="List1">
 							<!-- 网页slider开始 -->
@@ -161,9 +181,9 @@
 				</div>
 				<div class="whitLine"></div>
 				<div class="bottomBar clearfix">
-					<div class="column clearfix p_r">
+					<div class="column clearfix p_r container">
 						<h2>电子封装材料的电化学加工工艺</h2>
-						<ul>
+						<ul class="floatfix">
 							<li>
 								<a href="#" title="叉指电极">
 									<i class="colIcon_00"></i>叉指电极
@@ -202,12 +222,12 @@
 			<!-- 网页底部开始 -->
 			<div class="foot clearfix">
 				<div class="copyright">
-						<p class="copy">© 2016<a href="http://ce.sysu.edu.cn/epec/">电子封装电化学实验室</a></p>
-						<!-- <small style="margin-top:5px;">
-						<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="HolmesIcon1429022822" width="20" height="20"><param name="movie" value="http://eiv.baidu.com/hmt/icon/11.swf"><param name="flashvars" value="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3"><param name="allowscriptaccess" value="always">
-							<embed type="application/x-shockwave-flash" name="HolmesIcon1429022822" width="20" height="20" src="http://eiv.baidu.com/hmt/icon/11.swf" flashvars="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3" allowscriptaccess="always"></object>
-							</small> -->
-							<p class="designer">◇ <a href="http://ce.sysu.edu.cn/hope/">厚朴工作室设计</a> <a tittle="管理登陆" href="http://ce.sysu.edu.cn/admin/login.aspx">◇</a></p>
+					<p class="copy">© 2016<a href="http://ce.sysu.edu.cn/epec/">电子封装电化学实验室</a></p>
+					<!-- <small style="margin-top:5px;">
+					<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="HolmesIcon1429022822" width="20" height="20"><param name="movie" value="http://eiv.baidu.com/hmt/icon/11.swf"><param name="flashvars" value="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3"><param name="allowscriptaccess" value="always">
+										<embed type="application/x-shockwave-flash" name="HolmesIcon1429022822" width="20" height="20" src="http://eiv.baidu.com/hmt/icon/11.swf" flashvars="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3" allowscriptaccess="always"></object>
+						</small> -->
+						<p class="designer">◇ <a href="http://ce.sysu.edu.cn/hope/">厚朴工作室设计</a> <a tittle="管理登陆" href="http://ce.sysu.edu.cn/admin/login.aspx">◇</a></p>
 						<div class="clear"></div>
 					</div>
 				</div>
