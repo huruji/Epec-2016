@@ -497,6 +497,7 @@ a {
 	overflow: hidden;
 	position: relative;
 	width:960px;
+	margin:0 auto;
 }
 .container_index  .ScrCont {
 	width: 12700px;
