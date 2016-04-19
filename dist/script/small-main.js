@@ -14,7 +14,7 @@ function getstyle(ele,attr){
 		return getComputedStyle(ele)[attr];
 	}
 }
-function startmove(ele,json,speed,fn){
+function startMove(ele,json,speed,fn){
         clearInterval(ele.timer);
         ele.timer=setInterval(function(){
         	var btnstop=true;//用以解决多个属性变化不能到达目标值的问题
@@ -60,19 +60,19 @@ var searchBool=true;
 searchBtn.onclick=function(){
 	if(searchBool){
 		searchInput.style.display="inline-block";
-		startmove(searchInput,{width:200,opacity:100},7);
+		startMove(searchInput,{width:200,opacity:100},7);
 	}else{
-		startmove(searchInput,{width:0,opacity:0},7);
+		startMove(searchInput,{width:0,opacity:0},7);
 	}
 	searchBool=!searchBool;
 }
 menuBtn.onclick=function(){
 	var iwid=/\d+/g.exec(getstyle(head,"width"))[0];
 	if(searchBool){
-		startmove(menuContainer,{width:iwid,height:80},3);
+		startMove(menuContainer,{width:iwid,height:80},3);
 	}
 	else{
-		startmove(menuContainer,{width:0,height:0},4);
+		startMove(menuContainer,{width:0,height:0},4);
 	}
 	searchBool=!searchBool;
 }
