@@ -22,6 +22,11 @@ gulp.task("includeHtml",function(){
 	.pipe(contentIncluder({
           includerReg:/<!\-\-include\s+"([^"]+)"\-\->/g
       }))
+	.pipe(gulp.dest("./dist/html/"))
+})
+/*输出html*/
+gulp.task("html",function(){
+	return gulp.src("./src/html/*.html")
 	.pipe(gulp.dest("./dist/"))
 })
 //reload
@@ -38,11 +43,11 @@ gulp.task("browserSync",function(){
 });
 //监听
 gulp.task("watch",function(){
-	gulp.watch("src/html/*.html",["includeHtml","reload"]);
+	gulp.watch("src/html/*.html",["includeHtml","reload","html"]);
 	gulp.watch("src/css/*.css",["concatcss","reload"]);
 	gulp.watch("src/script/*.js",["concatjs","reload"]);
 	gulp.watch("src/images/",["reload"]);
 
 })
-gulp.task("default",["concatcss","concatjs","browserSync","includeHtml","watch"]);
+gulp.task("default",["concatcss","concatjs","browserSync","includeHtml","html","watch"]);
 gulp.task("server",["browserSync","watch"]);
