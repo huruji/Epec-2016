@@ -371,59 +371,68 @@ a {
 	background: #eee;
 }
 .inner {
-    width: 960px;
+    width: 1200px;
 	margin: 0 auto;
 }
 .slider {
-	width: 5880px;
-	height: 430px;
-	position: relative;
+	width: 1200%;
+	height: 400px;
+	position: absolute;
+	left:0;
 }
 .slider .bg {
-	height: 400px;
-	width: 620px;
-	float: left
+	height: 100%;
+	width: 65.957447%;
+	float: left;
+	background-size:100%;
 }
 .slider .intro {
 	float: left;
-	width: 315px;
-	height: 400px;
+	/* width: 33.510638%; */
+	width:32.510638%;
+	height: 100%;
 	margin-left: 5px;
 }
 .slider .intro .info {
-	padding: 20px 20px;
+	padding: 7%;
 	margin-bottom: 4px;
 	overflow: hidden;
-	height: 153px
+	height: 39.500000%;
 }
 .slider .intro .bottom li {
 	opacity: 1
 }
 .slider .slider_00, .slider .slider_01, .slider .slider_02, .slider .slider_03, .slider .slider_04, .slider .slider_05, .slider .slider_06, .slider .slider_07 {
-/* 	width: 940px; */
+    width:8.3334%;
 	float: left;
-	margin-right: 40px;
+	height:100%;
 }
 .slider .bg {
 	text-indent: -999999px
 }
 .slider .slider_00 .bg {
-	background: url(../images/slider_01.jpg) no-repeat
+	background-image: url(../images/slider_01.jpg);
+	background-repeat:no-repeat;
 }
 .slider .slider_01 .bg {
-	background: url(../images/slider_02.jpg) no-repeat
+	background-image: url(../images/slider_02.jpg);
+	background-repeat: no-repeat;
 }
 .slider .slider_02 .bg {
-	background: url(../images/slider_03.jpg) no-repeat
+	background-image: url(../images/slider_03.jpg);
+	background-repeat:no-repeat
 }
 .slider .slider_03 .bg {
-	background: url(../images/slider_04.jpg) no-repeat
+	background-image: url(../images/slider_04.jpg);
+	background-repeat:no-repeat
 }
 .slider .slider_04 .bg {
-	background: url(../images/slider_05.jpg) no-repeat
+	background-image: url(../images/slider_05.jpg);
+	background-repeat: no-repeat
 }
 .slider .slider_05 .bg {
-	background: url(../images/slider_06.jpg) no-repeat
+	background-image: url(../images/slider_06.jpg) ;
+	background-repeat:no-repeat
 }
 .slider .slider_06 .bg {
 	background: url(../images/slider_07.jpg) no-repeat
@@ -456,9 +465,9 @@ a {
 	background-color: #ffffff;
 }
 .intro h3 {
-	padding: 0 0 8px;
+/* 	padding: 0 0 8px; */
 	font-size: 18px;
-	margin-bottom: 15px;
+	margin-bottom: 3.75%;
 }
 .intro ul.indexlist {
 	list-style: disc inside;
@@ -517,16 +526,15 @@ a {
 	border-bottom: 1px solid #fff;
 	overflow: hidden
 }
-.container_index .Cont {
-	margin:0 auto;
+.slider-container {
 	margin-top: 30px;
+	margin-bottom:30px;
 	overflow: hidden;
 	position: relative;
-	width:960px;
-
+	height:400px;
 }
 .container_index  .ScrCont {
-	width: 12700px;
+	width: 16800px;
 }
 .slider_00, .slider_01, .slider_02, .slider_03, .slider_04, .slider_05, .slider_06 {
 	/* width: 940px; */
@@ -1636,9 +1644,9 @@ h3.c_subtitle {
 	margin-left: 447px;
 	top: 51px
 }
-.slider .intro .top {
+/* .slider .intro .top {
 	height: 163px
-}
+} */
 
 /* Research栏目图标 */
 ul#Research {
