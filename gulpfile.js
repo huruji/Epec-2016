@@ -13,7 +13,6 @@ gulp.task("concatcss",function(){
 //合并js文件
 gulp.task("concatjs",function(){
 	return gulp.src("./src/script/*.js")
-	.pipe(concat('main.js'))
 	.pipe(gulp.dest("./dist/script/"))
 });
 //合并html模块

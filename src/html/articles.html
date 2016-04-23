@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="ch">
 	<head>
+		<meta content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width" name="viewport">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>中山大学化学与化学工程学院 >> 电子封装电化学实验室 >>  社会实践</title>
 		<meta name="keywords" content="中山大学化学与化学工程学院,中山大学,化学与化学工程学院,中大化院,化院,丰盛堂">
@@ -12,37 +13,57 @@
 	<body>
 		<div class="wrapper">
 			<!-- 网页头部开始 -->
-			<div class="head p_r">
-				<img src="http://ce.sysu.edu.cn/Skin/HOPE_EPEC2014/images/banner.jpg">
+			<div class="head p_r container" id="head-container">
+				<div class="sm-container">
+					<div class="sm-content floatfix">
+						<div class="sm-menu-search floatfix">
+							<span class="sm-menu-icon sm-icon" id="sm-menu-icon"></span>
+							<span class="sm-search-icon sm-icon" id="sm-search-icon"></span>
+							<input type="text" class="sm-search-input" id="sm-search-input">
+						</div>
+					</div>
+					<div class="small-menu-container" id="small-menu-container">
+						<ul class="small-menu-list floatfix" id="">
+							<li class="small-menu-item"><a href="#">首页</a></li>
+							<li class="small-menu-item"><a href="#">关于EPEC</a></li>
+							<li class="small-menu-item"><a href="#">新闻资讯</a></li>
+							<li class="small-menu-item"><a href="#">通知公告</a></li>
+							<li class="small-menu-item"><a href="#">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+				<img src="../images/banner.jpg">
 			</div>
-			<div class="nav p_r">
-				<ul>
-					<li><a href="http://ce.sysu.edu.cn/EPEC/Index.aspx">首页</a></li>
-					<li><a href="http://ce.sysu.edu.cn/about/Index.aspx">关于EPEC</a></li>
-					<li><a href="http://ce.sysu.edu.cn/CommitteePCPCBcooperation1/Index.aspx">新闻资讯</a></li>
-					<li><a href="http://ce.sysu.edu.cn/tzgg/Index.aspx">通知公告</a></li>
-					<li><a href="http://ce.sysu.edu.cn/qgzy/Index.aspx">社会实践</a></li>
-					<li><a href="http://ce.sysu.edu.cn/epeccontactus/Index.aspx">联系我们</a></li>
-				</ul>
+			<div class="nav p_r floatfix">
+				<div class="nav-container container">
+					<div class="search-container">
+						<form action="" id="search" method="post" class="search f_r">
+							<fieldset>
+								<legend class="none">搜索</legend>
+								<input id="Keyword" class="text" onfocus="if(this.value == 'Keyword') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Keyword';}" value="Search" name="Keyword" onkeydown="if(event.keyCode == 13) OnSearchCheckAndSubmit();">
+								<input type="submit" value="" class="submit" onclick="OnSearchCheckAndSubmit();">
+							</fieldset>
+						</form>
+					</div>
+					<ul class="floatfix">
+						<li>
+							<a href="#"><i id="nav-house"></i>首页</a>
+						</li>
+						<li><a href="#">关于EPEC</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">通知公告</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- 网页头部结束 -->
 			<!-- 网页中部开始 -->
-			<div class="colContainer p_r">
-				<div class="navigation f_14">您现在所在的位置：
+			<div class="colContainer p_r ">
+				<div class="navigation f_14 container">您现在所在的位置：
 					<a href="http://ce.sysu.edu.cn/EPEC/Index.aspx" title="电子封装电化学实验室">电子封装电化学实验室 &#62;&#62;</a>
 					<a href="http://ce.sysu.edu.cn/qgzy/Index.aspx" title="社会实践">社会实践</a>
 				</div>
-				<div class="content clearfix">
-					<div class="mainBox">
-						<div class="boxWrap">
-							<ul class="list">
-								<li><a href="http://ce.sysu.edu.cn/Item/32223.aspx" target="_self" title="2016学年春季学期电子封装电化学实验室组织佛山春游">2016学年春季学期电子封装电化学实验室组织佛山春游</a></li>
-								<li><a href="http://ce.sysu.edu.cn/Item/30337.aspx" target="_self" title="广州市公安局基于现代大型分析仪器的刑侦技术学习">广州市公安局基于现代大型分析仪器的刑侦技术学习</a></li>
-								<li><a href="http://ce.sysu.edu.cn/Item/24719.aspx" target="_self" title="EPEC电子封装电化学实验室科研人员招聘">EPEC电子封装电化学实验室科研人员招聘</a></li>
-								<li><a href="http://ce.sysu.edu.cn/Item/24665.aspx" target="_self" title="EPEC电子封装电化学实验室本科生招聘">EPEC电子封装电化学实验室本科生招聘</a></li>
-							</ul>
-						</div>
-					</div>
+				<div class="content clearfix container">
 					<div class="sideBar">
 						<p>栏目导航</p>
 						<ul >
@@ -60,29 +81,29 @@
 							<li><a href="http://ce.sysu.edu.cn/jwz/Index.aspx">其他文章</a></li>
 						</ul>
 					</div>
+					<div class="mainBox">
+						<div class="boxWrap">
+							<ul class="list">
+								<li><a href="http://ce.sysu.edu.cn/Item/32223.aspx" target="_self" title="2016学年春季学期电子封装电化学实验室组织佛山春游">2016学年春季学期电子封装电化学实验室组织佛山春游</a></li>
+								<li><a href="http://ce.sysu.edu.cn/Item/30337.aspx" target="_self" title="广州市公安局基于现代大型分析仪器的刑侦技术学习">广州市公安局基于现代大型分析仪器的刑侦技术学习</a></li>
+								<li><a href="http://ce.sysu.edu.cn/Item/24719.aspx" target="_self" title="EPEC电子封装电化学实验室科研人员招聘">EPEC电子封装电化学实验室科研人员招聘</a></li>
+								<li><a href="http://ce.sysu.edu.cn/Item/24665.aspx" target="_self" title="EPEC电子封装电化学实验室本科生招聘">EPEC电子封装电化学实验室本科生招聘</a></li>
+							</ul>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<!-- 网页中部结束 -->
 			<!-- 网页底部开始 -->
 			<div class="foot clearfix">
-				<div class="copyright">
-					<div class="contactWrap">
-						<form action="" id="search" method="post" class="search f_l">
-							<fieldset>
-								<legend class="none">搜索</legend>
-								<input id="Keyword" class="text" onfocus="if(this.value == &#39;Keyword&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Keyword&#39;;}" value="Keyword" name="Keyword" onkeydown="if(event.keyCode == 13) OnSearchCheckAndSubmit();">
-								<input type="submit" value="Search" class="submit" onclick="OnSearchCheckAndSubmit();">
-							</fieldset>
-						</form>
-					</div>
-					<div class="footer_left">
-						<p class="copy">© 2011 <a href="http://www.sysu.edu.cn/2012/cn/index.html">中山大学</a><a href="http://ce.sysu.edu.cn/">化学与化学工程学院</a> <a href="http://ce.sysu.edu.cn/epec/">电子封装电化学实验室</a><br/>
-						<small style="margin-top:5px;">
-						<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="HolmesIcon1429022822" width="20" height="20"><param name="movie" value="http://eiv.baidu.com/hmt/icon/11.swf"><param name="flashvars" value="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3"><param name="allowscriptaccess" value="always">
-							<embed type="application/x-shockwave-flash" name="HolmesIcon1429022822" width="20" height="20" src="http://eiv.baidu.com/hmt/icon/11.swf" flashvars="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3" allowscriptaccess="always"></object>
-							</small>
-							◇ <a href="http://ce.sysu.edu.cn/hope/">厚朴工作室设计</a> <a tittle="管理登陆" href="http://ce.sysu.edu.cn/admin/login.aspx">◇</a></p>
-						</div>
+				<div class="copyright container">
+					<p class="copy">© 2016<a href="http://ce.sysu.edu.cn/epec/">电子封装电化学实验室</a></p>
+					<!-- <small style="margin-top:5px;">
+					<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="HolmesIcon1429022822" width="20" height="20"><param name="movie" value="http://eiv.baidu.com/hmt/icon/11.swf"><param name="flashvars" value="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3"><param name="allowscriptaccess" value="always">
+											<embed type="application/x-shockwave-flash" name="HolmesIcon1429022822" width="20" height="20" src="http://eiv.baidu.com/hmt/icon/11.swf" flashvars="s=http://tongji.baidu.com/hm-web/welcome/ico?s=d6b55659b681cd7bbe596f1451920ab3" allowscriptaccess="always"></object>
+						</small> -->
+						<p class="designer">◇ <a href="http://ce.sysu.edu.cn/hope/">厚朴工作室设计</a> <a tittle="管理登陆" href="http://ce.sysu.edu.cn/admin/login.aspx">◇</a></p>
 						<div class="clear"></div>
 					</div>
 				</div>
@@ -105,7 +126,9 @@
 				<!-- 网页底部结束 -->
 				<!-- js文件引入 开始 -->
 				<script type="text/javascript" src="jquery-1.4.1.min.js"></script>
-				
+				<script src="../script/search.js" type="text/javascript" charset="utf-8" async="" defer=""></script>
+				<script src="../script/main.js" type="text/javascript" charset="utf-8" async="" defer=""></script>
+				<script src="../script/small-main.js" type="text/javascript" charset="utf-8" async="" defer=""></script>
 				<!-- js文件引入 结束-->
 			</body>
 		</html>
