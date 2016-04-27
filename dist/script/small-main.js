@@ -50,6 +50,13 @@ function startMove(ele,json,speed,fn){
         	}
         }, 30)
 }
+/*function addEvent(eve,fn,7){
+	if(ele.attachEvent){
+		return attachEvent("on"+eve,fn);
+	}else{
+		return addEventListener(eve, fn,false);
+	}
+}*/
 var searchBtn=$("sm-search-icon");
 var searchInput=$("sm-search-input");
 var menuBtn=$("sm-menu-icon");

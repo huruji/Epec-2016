@@ -1,10 +1,10 @@
 /**
  * 
- * @authors 谢志强 (594613537@qq.com)
- * @date    2016-04-19 11:02:32
- * @version V1.0.0
+ * @authors 谢志强(忽如寄)(594613537@qq.com)
+ * @date    2016-04-19 13:22:48
+ * @version $Id$
  */
- //获取id的元素函数
+
 function $(id){
 	return document.getElementById(id);
 }
@@ -16,70 +16,78 @@ function getStyle(ele,attr){
 		return getComputedStyle(ele)[attr];
 	}
 }
+var facus=$("facus");
+var buttons=facus.getElementsByTagName("span");
 var sliderCon=$("slider-container");
 var widthDiv=$("ISL_Cont");
 var moveWidth=parseInt(getStyle(widthDiv,"width"));
-/*function autoMove(ele){
-	clearInterval(intervalID)
-}*/
-/*timer=setInterval(function(){
-	var cur=parseInt(getStyle(sliderCon,"left"));
-	if((cur%moveWidth==0)&&(cur!=0)){
-		clearInterval(timer);
-	}else{
-		sliderCon.style.left=cur-10+"px";
-	}
-}, 30);*/
-function autoMove(){
-	var target=moveWidth;
-	/*var i=1;*/
-	var i=1;
-	for(var i=1;i<6;i++){
-	/*startmove(sliderCon,{left:-target},7*//*,function(){
-		setTimeout(function(){startmove(sliderCon,{left:-2*target},7)}, 3000)
-		
-	}*/
-	/*if(parseInt(getStyle(sliderCon,"left"))==target){
-		alert(parseInt(getStyle(sliderCon,"left"))==target);*/
-	/*i++;*/
-	setTimeout(function(){startmove(sliderCon,{left:-i*target},7)}, 3000);
-}
-}
-autoMove();
-function startmove(ele,json,speed,fn){
-        clearInterval(ele.timer);
-        ele.timer=setInterval(function(){
-        	var btnstop=true;//用以解决多个属性变化不能到达目标值的问题
-        	for(attr in json){
-        		if(attr=="opacity"){
-        		var cur=parseInt(parseFloat(getstyle(ele,attr))*100);
-        	}
-        	else{
-                var cur=parseInt(getstyle(ele,attr));//parseInt将getstyle的东西转换为整数，并将单位忽略
-        	}
-        	var ispeed=(json[attr]-cur)/speed;
-        	if(ispeed>0){
-        		ispeed=Math.ceil(ispeed);
-        	}else{
-        		ispeed=Math.floor(ispeed);//解决当cur大于itarget时的问题
-        	}
-        		if(attr=="opacity"){
-        			ele.style[attr]=(cur+ispeed)/100;
-        			ele.style.filter="alpha(opacity:"+cur+ispeed+")";
-        		}else{
-        			ele.style[attr]=cur+ispeed+"px";
-        		}
-        		if(cur!=json[attr]){
-        		btnstop=false
-        	}
-        	}
+var index=0;
+var timer;
+var donghua=true;
+sliderCon.style.height=0.42553191*moveWidth+"px";
+widthDiv.style.height=0.42553191*moveWidth+"px";
+sliderCon.style.left=0;
 
-        	if(btnstop){
-               clearInterval(ele.timer);
-               if(fn){
-               	fn();
-               }
-        	}
-        }, 30)
-        return ele.timer;
+sliderCon.innerHTML+=sliderCon.innerHTML;
+function startmove(target){
+	clearInterval(sliderCon.timer);
+	sliderCon.timer=setInterval(function(){
+		var currentLeft=parseInt(getStyle(sliderCon,"left"));
+		var speed=(target-currentLeft)/7;
+		if(speed>0){
+			speed=Math.ceil(speed);
+		}else{
+			speed=Math.floor(speed);
+		}
+		if(speed==0){
+			clearInterval(sliderCon.timer);
+		}else{
+			sliderCon.style.left=currentLeft+speed+"px";
+		}
+	}, 50);
+}
+
+
+
+function play(){
+	window.onresize=function(){
+	moveWidth=parseInt(getStyle(widthDiv,"width"));
+	sliderCon.style.height=0.42553191*moveWidth+"px";
+	widthDiv.style.height=0.42553191*moveWidth+"px";
+	sliderCon.style.left=i*moveWidth+"px";
+}
+	timer=setTimeout(function(){
+		var currentLeft=parseInt(getStyle(sliderCon,"left"));
+		if(donghua){
+			if(currentLeft<(-5*moveWidth)){
+				sliderCon.style.left=0;
+/*			index=0;*/
+			}else{
+		  		index+=1;
+		  		startmove(-index*moveWidth);
+			}
+        	showBut();
+        }
+        	play();
+	}, 10000)
+}
+play();
+
+function showBut(){
+        if(index>5){
+            index=0;
+        }
+        for(var i=0;i<buttons.length;i++){
+        	buttons[i].style.background="#ccc";
+        }
+        buttons[index].style.background="blue";
+}
+
+for(var i=0;i<buttons.length;i++){
+    buttons[i].index=i;
+    buttons[i].onclick=function(){
+        index=this.index;
+        startmove(-(this.index)*moveWidth)
+        showBut();
+        }
 }
