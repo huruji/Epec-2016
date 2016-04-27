@@ -16,13 +16,19 @@ function getStyle(ele,attr){
 		return getComputedStyle(ele)[attr];
 	}
 }
+var facus=$("facus");
+var buttons=facus.getElementsByTagName("span");
 var sliderCon=$("slider-container");
 var widthDiv=$("ISL_Cont");
 var moveWidth=parseInt(getStyle(widthDiv,"width"));
-var i=1;
+var index=0;
+var timer;
+var donghua=true;
 sliderCon.style.height=0.42553191*moveWidth+"px";
 widthDiv.style.height=0.42553191*moveWidth+"px";
 sliderCon.style.left=0;
+
+sliderCon.innerHTML+=sliderCon.innerHTML;
 function startmove(target){
 	clearInterval(sliderCon.timer);
 	sliderCon.timer=setInterval(function(){
@@ -40,34 +46,48 @@ function startmove(target){
 		}
 	}, 50);
 }
-function move(){
-	 var timer=setInterval(function(){
-		var currentLeft=parseInt(getStyle(sliderCon,"left"));
-		sliderCon.style.left=currentLeft-10+"px";
-	}, 1000);
-}
-setInterval(function(){
-	var currentLeft=parseInt(getStyle(sliderCon,"left"));
+
+
+
+function play(){
 	window.onresize=function(){
-			moveWidth=parseInt(getStyle(widthDiv,"width"));
-			/*alert(moveWidth);*/
-			sliderCon.style.height=0.42553191*moveWidth+"px";
-			widthDiv.style.height=0.42553191*moveWidth+"px";
-			sliderCon.style.left=i*moveWidth+"px";
-			if(i<6){
-				setTimeout(startmove(-i*moveWidth),5000);
-				i++;
-			}if(i>=6){
-				i=0;
+	moveWidth=parseInt(getStyle(widthDiv,"width"));
+	sliderCon.style.height=0.42553191*moveWidth+"px";
+	widthDiv.style.height=0.42553191*moveWidth+"px";
+	sliderCon.style.left=i*moveWidth+"px";
+}
+	timer=setTimeout(function(){
+		var currentLeft=parseInt(getStyle(sliderCon,"left"));
+		if(donghua){
+			if(currentLeft<(-5*moveWidth)){
+				sliderCon.style.left=0;
+/*			index=0;*/
+			}else{
+		  		index+=1;
+		  		startmove(-index*moveWidth);
 			}
-		}
-	if(currentLeft%moveWidth==0){
-			if(i<6){
-				setTimeout(startmove(-i*moveWidth),5000);
-				i++;
-			}if(i>=6){
-				i=0;
-			}
-	}
-	return i;
-}, 3000)
+        	showBut();
+        }
+        	play();
+	}, 10000)
+}
+play();
+
+function showBut(){
+        if(index>5){
+            index=0;
+        }
+        for(var i=0;i<buttons.length;i++){
+        	buttons[i].style.background="#ccc";
+        }
+        buttons[index].style.background="blue";
+}
+
+for(var i=0;i<buttons.length;i++){
+    buttons[i].index=i;
+    buttons[i].onclick=function(){
+        index=this.index;
+        startmove(-(this.index)*moveWidth)
+        showBut();
+        }
+}
