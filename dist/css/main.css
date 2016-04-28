@@ -769,7 +769,7 @@ a {
 	min-height: 500px
 }
 .mainBox .boxWrap .list li {
-	border-bottom: #888888 1px dashed;
+	border-bottom: #E0E0E0 1px dashed;
 	padding-top: 8px;
 	padding-left:10px;
 }
@@ -791,7 +791,7 @@ a {
 /*news页面*/
 .mainBox .boxWrap h4 {
 	margin-top: 15px;
-	border-bottom: 1px #ccc dashed
+	border-bottom: 1px #E0E0E0 dashed
 }
 @media screen and (max-width:960px){
 	.mainBox .boxWrap h4{
@@ -807,7 +807,8 @@ a {
 .mainBox .boxWrap h4 a {
 	font: 18px 'Microsoft Yahei';
 	color: #14377d;
-	line-height: 33px
+	line-height: 33px;
+	text-shadow:none;
 }
 .p_r .news-info{
 	height:124px;
