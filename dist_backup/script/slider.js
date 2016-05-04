@@ -33,7 +33,7 @@ function startmove(target){
 	clearInterval(sliderCon.timer);
 	sliderCon.timer=setInterval(function(){
 		var currentLeft=parseInt(getStyle(sliderCon,"left"));
-		var speed=(target-currentLeft)/2;
+		var speed=(target-currentLeft)/7;
 		if(speed>0){
 			speed=Math.ceil(speed);
 		}else{
