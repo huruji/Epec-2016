@@ -5,8 +5,11 @@ epec16年改版网站
 
 [栏目页展示 http://huruji.github.io/Epec-2016/dist/html/column.html](http://huruji.github.io/Epec-2016/dist/html/column.html)
 
-[文章页展示 http://huruji.github.io/Epec-2016/dist/html/articles.html](http://huruji.github.io/Epec-2016/dist/html/articles.html)
+[文章列表页展示 http://huruji.github.io/Epec-2016/dist/html/articles.html](http://huruji.github.io/Epec-2016/dist/html/articles.html)
 
 [新闻页展示 http://huruji.github.io/Epec-2016/dist/html/news.html](http://huruji.github.io/Epec-2016/dist/html/news.html)
 
+[图片展示页展示 http://huruji.github.io/Epec-2016/dist/html/showimg.html](http://huruji.github.io/Epec-2016/dist/html/showimg.html)
+
+[文章内容页展示 http://huruji.github.io/Epec-2016/dist/html/content.html](http://huruji.github.io/Epec-2016/dist/html/content.html)
 
